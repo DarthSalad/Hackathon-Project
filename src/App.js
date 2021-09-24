@@ -1,8 +1,12 @@
 import React from 'react';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Home from "./components/Home"
+// import {auth} from './firebase';
+// import {useAuthState} from 'react-firebase-hooks/auth';
 
 function App() {
+  
+  
   return (
     <BrowserRouter>
       <Switch>
