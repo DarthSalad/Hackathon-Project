@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.css";
 import Avatar from "@material-ui/core/Avatar";
 
-function Post({ key, username, caption, imageUrl, avatar }) {
+function Post({ key, username, caption, imageUrl, avatar,latitude,longitude }) {
   return (
     <div className="post">
       <div className="postHeader">

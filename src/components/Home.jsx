@@ -6,6 +6,7 @@ import Post from "./post/Post";
 import "./home.css";
 import Upload from "./Upload/Upload";
 import Map from "./Map";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [user] = useAuthState(auth);
@@ -37,6 +38,7 @@ export default function Home() {
             src="https://media4.giphy.com/media/QtvEouZBOE8nPn7yFx/giphy.gif?cid=ecf05e4780dmov4oik0gjw83y12aujieratts3hmsgrlj6ik&rid=giphy.gif&ct=s"
             alt="instagram"
           />
+          <Link to="profile"><button>Profile</button></Link>
           <button onClick={logout}>logout</button>
         </div>
         {/* <div>HI</div> */}
@@ -52,8 +54,9 @@ export default function Home() {
                 avatar={post.avatar}
                 />
                 <button classname="locate" onClick={() => {
-                    setLat(25.594095)
-                    setLon(85.137566)
+                    setLat(post.latitude)
+                    setLon(post.longitude)
+                    {console.log(post)}
                 }} className="locate">Locate</button>
             </span>
         
