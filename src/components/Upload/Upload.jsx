@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import { storage, db } from "../../firebase";
+import './upload.css'
 
 function Imageupload({ username, avatar }) {
   const [image, setImage] = useState(null);
@@ -51,7 +52,7 @@ function Imageupload({ username, avatar }) {
   };
 
   return (
-    <div>
+    <div classname="img-upload">
       <progress value={progress} max="100" />
       <input
         type="text"
