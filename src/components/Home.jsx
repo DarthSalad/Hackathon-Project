@@ -5,10 +5,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Post from "./post/Post";
 import "./home.css";
 import Upload from "./Upload/Upload";
+import Map from "./Map";
 
 export default function Home() {
   const [user] = useAuthState(auth);
   const [posts, setPosts] = useState([]);
+  const [lat, setLat] = useState(51.507351);
+  const [lon, setLon] = useState(-0.127758)
 
   useEffect(() => {
     db.collection("posts").onSnapshot((snapshot) => {
@@ -18,6 +21,7 @@ export default function Home() {
           post: doc.data(),
         }))
       );
+    //   console.log(posts);
     });
   }, []);
 
@@ -35,14 +39,23 @@ export default function Home() {
           />
           <button onClick={logout}>logout</button>
         </div>
+        {/* <div>HI</div> */}
+        <Map lat={lat} lon={lon} />
         {posts.map(({ id, post }) => (
-          <Post
-            key={id}
-            username={post.username}
-            caption={post.caption}
-            imageUrl={post.imageUrl}
-            avatar={post.avatar}
-          />
+            <span>
+                <Post
+                // key={id}
+                username={post.username}
+                caption={post.caption}
+                imageUrl={post.imageUrl}
+                avatar={post.avatar}
+                />
+                <button onClick={() => {
+                    setLat(25.594095)
+                    setLon(85.137566)
+                }} className="locate">Locate</button>
+            </span>
+        
         ))}
         <Upload username={user.displayName} avatar={user.photoURL} />
       </>
