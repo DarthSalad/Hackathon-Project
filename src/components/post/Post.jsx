@@ -6,7 +6,7 @@ function Post({ key, username, caption, imageUrl, avatar }) {
   return (
     <div className="post">
       <div className="postHeader">
-        <Avatar className="postAvatar" alt="saswat" src="../" />
+        <Avatar className="postAvatar" alt="saswat" src={avatar} />
         <h3>{username}</h3>
       </div>
       {/* header */}

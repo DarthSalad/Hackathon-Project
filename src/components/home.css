@@ -3,6 +3,16 @@
   padding: 0;
 }
 
+span {
+  position: relative;
+}
+
+.locate {
+  position: relative;
+  top: -100px;
+  right: -425px;
+}
+
 .app {
   background-color: #fafafa;
 }
@@ -38,4 +48,11 @@
 .appHeaderImage {
   width: 8%;
   object-fit: contain;
+}
+
+#map {
+  height: 500px;
+  position: absolute;
+  right: 0;
+  width: 50%;
 }
