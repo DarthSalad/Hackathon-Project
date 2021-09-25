@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-color: #fafafa;
+}
+
+.appHeader {
+  background-color: white;
+  padding: 10px;
+  object-fit: contain;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  position: sticky;
+  height: 10vh;
+  justify-content: space-between;
+  box-shadow: 1px 2px 3px rgba(194, 145, 196, 0.418);
+}
+
+.appHeader > button {
+  height: 30px;
+  margin: auto;
+  margin-right: 20px;
+  border-radius: 40%;
+  padding: 0 5px;
+  background-color: transparent;
+  box-shadow: 1px 3px 3px rgb(180, 137, 180);
+  color: rgb(145, 54, 145);
+}
+
+.appHeader > button:hover {
+  transform: translateY(-4px);
+  transition: all 0.8s;
+}
+
+.appHeaderImage {
+  width: 8%;
+  object-fit: contain;
+}
