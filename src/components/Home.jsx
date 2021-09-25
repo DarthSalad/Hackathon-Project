@@ -41,6 +41,7 @@ export default function Home() {
         </div>
         {/* <div>HI</div> */}
         <Map lat={lat} lon={lon} />
+        <Upload username={user.displayName} avatar={user.photoURL} />
         {posts.map(({ id, post }) => (
             <span>
                 <Post
@@ -57,7 +58,6 @@ export default function Home() {
             </span>
         
         ))}
-        <Upload username={user.displayName} avatar={user.photoURL} />
       </>
     );
   }

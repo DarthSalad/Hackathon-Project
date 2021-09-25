@@ -53,7 +53,6 @@ function Imageupload({ username, avatar }) {
 
   return (
     <div classname="img-upload">
-      <progress value={progress} max="100" />
       <input
         type="text"
         placeholder="Enter a caption"
@@ -62,6 +61,7 @@ function Imageupload({ username, avatar }) {
       />
       <input type="file" onChange={handleChange} />
       <Button onClick={handleUpload}>Upload</Button>
+      <progress value={progress} max="100" />
     </div>
   );
 }
