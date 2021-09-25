@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import React, {useRef, useEffect, useState} from 'react'
 import { Loader } from "@googlemaps/js-api-loader"
+import './map.css'
 
 export default function Map(props) {
     // eslint-disable-next-line

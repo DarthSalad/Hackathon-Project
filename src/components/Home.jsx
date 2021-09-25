@@ -50,7 +50,7 @@ export default function Home() {
                 imageUrl={post.imageUrl}
                 avatar={post.avatar}
                 />
-                <button onClick={() => {
+                <button classname="locate" onClick={() => {
                     setLat(25.594095)
                     setLon(85.137566)
                 }} className="locate">Locate</button>

@@ -1,0 +1,9 @@
+progress{
+    margin: auto 20px;
+}
+.img-upload{
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
