@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;600;700;1000;2000&family=Open+Sans&display=swap');
 .post {
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   max-width: 700px;
   background-color: white;
   border: 1px solid lightgray;
-  margin: 45px auto;
+  margin: 45px auto 45px 45px;
   border-radius: 10px;
 }
 
@@ -29,6 +29,7 @@ h3{
 .postHeader {
   display: flex;
   align-items: center;
+  margin-left: 50px;
   padding: 20px;
 }
 
