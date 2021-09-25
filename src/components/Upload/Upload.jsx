@@ -7,8 +7,8 @@ function Imageupload({ username, avatar }) {
   const [image, setImage] = useState(null);
   const [progress, setProgress] = useState(0);
   const [caption, setCaption] = useState("");
-  const [lat, setLat] = useState(0);
-  const [lon, setLon] = useState(0)
+  let lat = 0
+  let lon = 0
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
@@ -22,8 +22,8 @@ function Imageupload({ username, avatar }) {
     navigator.geolocation.getCurrentPosition(function(position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
-      setLat(position.coords.latitude)
-      setLon(position.coords.longitude)
+      lat = position.coords.latitude
+      lon = position.coords.longitude
       console.log(lon)
       console.log(lat)
     });
@@ -59,8 +59,8 @@ function Imageupload({ username, avatar }) {
             setProgress(0);
             setCaption("");
             setImage(null);
-            setLat(0);
-            setLon(0);
+            // setLat(0);
+            // setLon(0);
           });
       }
     );
