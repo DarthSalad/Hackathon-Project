@@ -68,7 +68,7 @@ function Imageupload({ username, avatar }) {
   };
 
   return (
-    <div classname="img-upload">
+    <div className="img-upload">
       <input
         type="text"
         placeholder="Enter a caption"
