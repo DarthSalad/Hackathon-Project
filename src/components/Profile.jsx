@@ -7,6 +7,7 @@ import "./home.css";
 import Upload from "./Upload/Upload";
 import Map from "./Map";
 import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 // import MyModal from "./post/MyModal";
 
 export default function Home() {
@@ -51,8 +52,8 @@ export default function Home() {
           src="https://media4.giphy.com/media/QtvEouZBOE8nPn7yFx/giphy.gif?cid=ecf05e4780dmov4oik0gjw83y12aujieratts3hmsgrlj6ik&rid=giphy.gif&ct=s"
           alt="instagram"
         />
-        <Link to=""><button>Home</button></Link>
-        <button onClick={logout}>logout</button>
+        <Link to=""><Button variant="light">Home</Button></Link>
+        <Button onClick={logout} variant="primary">Logout</Button>
       </div>
       {/* <div>HI</div> */}
       {/* {console.log(mapcluster())} */}
@@ -71,13 +72,13 @@ export default function Home() {
               latitude={post.latitude}
               longitude={post.longitude}
               />
-              <button style={{width:"100px", height: "50px" }} onClick={() => {
+              <Button style={{width:"100px", height: "50px" }} onClick={() => {
                   setLat(post.latitude)
                   setLon(post.longitude)
                   // eslint-disable-next-line no-lone-blocks
                   {console.log(post)}
                   window.scrollTo(0, 0)
-              }} className="locate">Locate</button>
+              }} className="locate">Locate</Button>
           </span>
           
       ))}
