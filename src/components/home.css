@@ -18,15 +18,16 @@ span {
 }
 
 .appHeader {
+  padding-top: 50px;
   background-color: white;
   padding: 10px;
   object-fit: contain;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgb(255, 255, 255);
   display: flex;
   position: sticky;
   height: 10vh;
-  justify-content: space-between;
-  box-shadow: 1px 2px 3px rgba(194, 145, 196, 0.418);
+  justify-content: center;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.418);
 }
 
 .appHeader > button {
@@ -49,23 +50,26 @@ span {
 .appHeaderImage {
   width: 8%;
   object-fit: contain;
+  padding: 0;
+  position: relative;
+  top: -20px;
 }
 
 #map {
   float: right;
   height: 500px;
-  max-width: 550px;
-  margin: 135px 25px auto 10px;
+  /* max-width: 550px; */
+  /* margin: 135px 25px auto 10px; */
   top: 0px;
   position: fixed;
-  width: 50%;
+  width: 100%;
   z-index: 5;
   /* position: absolute; */
   /* right: 0; */
 }
 
 .locate{
-  margin-left: 180px;
+  margin: -10px 39%;
   border-radius: 10px;
   height: 30px;
   width: 80px;
@@ -73,4 +77,8 @@ span {
 
 .locate:hover{
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#root{
+  background-color: rgb(231, 231, 231);
 }
