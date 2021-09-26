@@ -68,17 +68,41 @@ span {
   /* right: 0; */
 }
 
-.locate{
+.locate {
   margin: -10px 39%;
   border-radius: 10px;
   height: 30px;
   width: 80px;
 }
 
-.locate:hover{
+.locate:hover {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-#root{
+#root {
   background-color: rgb(231, 231, 231);
 }
+
+@media screen and (max-width: 450px) and (min-width: 299px) {
+  .locate {
+    margin-left: -150px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 475px) {
+  .locate {
+    margin-left: 180px;
+  }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 820px) {
+  .locate {
+    margin-left: 300px;
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+  #locate {
+    margin-left: -133px;
+  }
+} */
