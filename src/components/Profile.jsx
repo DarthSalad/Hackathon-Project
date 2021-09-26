@@ -32,6 +32,7 @@ export default function Home() {
 
   const logout = () => {
     auth.signOut();
+    window.location = "/";
   };
 
   // function mapcluster() {
