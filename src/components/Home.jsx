@@ -4,7 +4,7 @@ import { db, auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Post from "./post/Post";
 import "./home.css";
-import Upload from "./Upload/Upload";
+// import Upload from "./Upload/Upload";
 // import Map from "./Map";
 import { Link } from "react-router-dom";
 
@@ -44,7 +44,7 @@ export default function Home() {
         
         {/* <Map lat={lat} lon={lon} /> */}
 
-        <Upload username={user.displayName} avatar={user.photoURL} />
+        {/* <Upload username={user.displayName} avatar={user.photoURL} /> */}
         {posts.map(({ id, post }) => (
             <span>
                 <Post
@@ -62,7 +62,7 @@ export default function Home() {
                     {console.log(post)}
                 }} className="locate">Locate</button> */}
             </span>
-        
+            
         ))}
       </>
     );
