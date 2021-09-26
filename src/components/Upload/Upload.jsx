@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import { storage, db } from "../../firebase";
-import './upload.css'
+import "./upload.css";
+import { Button } from "react-bootstrap";
 
 function Imageupload({ username, avatar }) {
   const [image, setImage] = useState(null);
   const [progress, setProgress] = useState(0);
   const [caption, setCaption] = useState("");
-  let lat = 0
-  let lon = 0
+  let lat = 0;
+  let lon = 0;
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
@@ -19,13 +20,13 @@ function Imageupload({ username, avatar }) {
   const handleUpload = () => {
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
 
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
-      lat = position.coords.latitude
-      lon = position.coords.longitude
-      console.log(lon)
-      console.log(lat)
+      lat = position.coords.latitude;
+      lon = position.coords.longitude;
+      console.log(lon);
+      console.log(lat);
     });
 
     uploadTask.on(
@@ -54,7 +55,7 @@ function Imageupload({ username, avatar }) {
               username: username,
               avatar: avatar,
               longitude: lon,
-              latitude: lat
+              latitude: lat,
             });
             setProgress(0);
             setCaption("");
@@ -64,7 +65,6 @@ function Imageupload({ username, avatar }) {
           });
       }
     );
-
   };
 
   return (
@@ -76,7 +76,9 @@ function Imageupload({ username, avatar }) {
         value={caption}
       />
       <input type="file" onChange={handleChange} />
-      <Button onClick={handleUpload}>Upload</Button>
+      <Button var="primary" onClick={handleUpload}>
+        Upload
+      </Button>
       <progress value={progress} max="100" />
     </div>
   );
