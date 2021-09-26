@@ -7,7 +7,7 @@ import "./home.css";
 import Upload from "./Upload/Upload";
 import Map from "./Map";
 import { Link } from "react-router-dom";
-import MyModal from "./post/MyModal";
+// import MyModal from "./post/MyModal";
 
 export default function Home() {
   const [user] = useAuthState(auth);
@@ -15,7 +15,7 @@ export default function Home() {
   const [lat, setLat] = useState(51.507351);
   const [lon, setLon] = useState(-0.127758)
 
-  let locations = []
+  // let locations = []
 
 
   useEffect(() => {
@@ -71,9 +71,10 @@ export default function Home() {
               latitude={post.latitude}
               longitude={post.longitude}
               />
-              <button style={{width:"100px", height: "50px" }} classname="locate" onClick={() => {
+              <button style={{width:"100px", height: "50px" }} onClick={() => {
                   setLat(post.latitude)
                   setLon(post.longitude)
+                  // eslint-disable-next-line no-lone-blocks
                   {console.log(post)}
                   window.scrollTo(0, 0)
               }} className="locate">Locate</button>
