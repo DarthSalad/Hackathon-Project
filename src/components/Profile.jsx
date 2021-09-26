@@ -77,7 +77,7 @@ export default function Home() {
                 longitude={post.longitude}
               />
               <Button
-                style={{ width: "100px", height: "50px" }}
+                style={{ width: "120px", height: "50px" }}
                 onClick={() => {
                   setLat(post.latitude);
                   setLon(post.longitude);
@@ -89,7 +89,7 @@ export default function Home() {
                 }}
                 className="locate"
               >
-                Locate
+                Locate me
               </Button>
             </span>
           )
