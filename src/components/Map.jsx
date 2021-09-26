@@ -20,6 +20,7 @@ export default function Map(props) {
         map = new window.google.maps.Marker({
           position: { lat: props.lat, lng: props.lon },
           map: map,
+          zoom : 8
         });
       });
 

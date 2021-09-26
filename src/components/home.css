@@ -49,16 +49,19 @@ span {
 .appHeaderImage {
   width: 8%;
   object-fit: contain;
+  padding: 0;
+  position: relative;
+  top: -20px;
 }
 
 #map {
   float: right;
   height: 500px;
-  max-width: 550px;
-  margin: 135px 25px auto 10px;
+  /* max-width: 550px; */
+  /* margin: 135px 25px auto 10px; */
   top: 0px;
   position: fixed;
-  width: 50%;
+  width: 100%;
   z-index: 5;
   /* position: absolute; */
   /* right: 0; */

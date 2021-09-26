@@ -1,6 +1,7 @@
 // import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import React, { Component } from "react";
+// eslint-disable-next-line
 import { render } from "react-dom";
 
 class Profile extends Component {
