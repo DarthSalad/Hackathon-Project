@@ -7,7 +7,7 @@ export default function Map(props) {
     // eslint-disable-next-line
     let map 
     const loader = new Loader({
-        apiKey: "AIzaSyDBcbRmqerNyFYhL2zlOafIBD0drFsgyb8",
+        apiKey: "YOUR_API_KEY",
         version: "weekly"
       });
       
